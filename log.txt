@@ -1,5 +1,0 @@
-Time: 2021-12-27 22:59:38.985208 
-Input in Name:  
-Input in Email:  
-We returned: Rendered HTML page 
-
