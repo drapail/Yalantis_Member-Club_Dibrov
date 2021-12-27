@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <h2>Welcome to the Club, buddy!</h2>
+    <div class="form">
+        <form action="/" method="POST">
+            <label for="user_Name">Name:</label>
+            <input type="text" name="Name_ClassName" id="user_Name" placeholder="Maksym Dibrov"> <br>
+            <label for="user_Email">Email:</label>
+            <input type="text" name="Email_ClassName" id="user_Email" placeholder="mv.dibrov@gmail.com"> <br>
+            <input type="submit" value="Add">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+
+    <div class="error">
+        {{ error_invalid_email }}
+        {{ error_duplicate_email }}
+        {{ error_invalid_name }}
+    </div>
+
+{% endblock %}
+
+{% block body %}
+
+    {% for table in tables %}
+                {{ table|safe }}
+    {% endfor %}
+
+
+{% endblock %}
